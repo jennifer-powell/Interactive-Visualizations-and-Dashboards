@@ -7,8 +7,8 @@ function buildMetadata(sample){
         var PANEL = d3.select("#sample-metadata");
         PANEL.html("");
 
-        Object.defineProperties(result).forEach(([key, value]) => {
-            PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+        Object.entries(result).forEach(([key, value]) => {
+            PANEL.append("h6").text(`${key}: ${value}`);
         });
 
     });
@@ -23,8 +23,8 @@ function buildMetadata(sample){
 
 function buildCharts(sample){
     d3.json("samples.json").then((data) => {
-        var metadata = data.metadata;
-        var resultArray= metadata.filter(sampleObj=>sampleObj.id ==sample);
+        // var metadata = data.metadata;
+        var resultArray= data.samples.filter(sampleObj=>sampleObj.id ==sample);
         var result= resultArray[0];
         var otu_ids = result.otu_ids;
         var otu_labels= result.otu_labels;
@@ -42,7 +42,7 @@ function buildCharts(sample){
         ];
         var barLayout = {
             title: "Top 10 Bacteria Cultures Found",
-            margin: {t:30, l:150}
+            // margin: {t:30, l:150}
         };
         Plotly.newPlot("bar", barData, barLayout);
 
@@ -56,10 +56,10 @@ function buildCharts(sample){
 
         var bubbleLayout = {
             title: "Bacteria Cultures Per Sample",
-            margin: {t:0},
+            // margin: {t:0},
             hovermode: "closest",
             xaxis: {ttile: "OTU ID"},
-            margin: {t: 30}
+            // margin: {t: 30}
         };
         var bubbleData = [
             {
@@ -92,7 +92,7 @@ function buildCharts(sample){
 function init(){
 
     var selector = d3.select("#selDataset");
-    d3.json("sample.json").then((data) =>{
+    d3.json("samples.json").then((data) =>{
         var sampleNames = data.names;
 
         sampleNames.forEach((sample) => {
