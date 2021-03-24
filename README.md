@@ -12,7 +12,7 @@ The dataset reveals that a small handful of microbial species (also called opera
   - ### StarterCode/static/js/app.js file
     ##### This file reads in the samples.json
   - ### StarterCode/static/js/index.html file
-    ##### This displays the data 
+    ##### This displays the data ti git hib pages
   - ### Data/sample.json file
     ##### This file contains the sample data used 
   
@@ -29,5 +29,6 @@ The dataset reveals that a small handful of microbial species (also called opera
    - Used `sample_values` for the marker size.
    - Used `otu_ids` for the marker colors.
    - Used `otu_labels` for the text values.
-
+  ### GitHub Pages link
+   - https://jennifer-powell.github.io/Interactive-Visualizations-and-Dashboards/StarterCode/static/js/index.html
 
