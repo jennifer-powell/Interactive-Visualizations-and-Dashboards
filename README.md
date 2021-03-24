@@ -6,7 +6,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 
 - ## Programs, Languages and tools
-  - Plotly,  D3, HTML
+  - Plotly,  D3, HTML, GitHub Pages, Javascript
 
 - ## File overview
   - ### StarterCode/static/js/app.js file
